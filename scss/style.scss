@@ -1,0 +1,131 @@
+$cor-principal: rgb(0,92,255);
+$cinza-escuro: #3e3e3e;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+button {
+    font-family: 'Raleway', sans-serif;
+    color: $cinza-escuro;
+}
+
+html,
+body {
+    height: 100%;
+    background: rgba($cor-principal, 0.8);
+    opacity: 50%;
+}
+
+.titulo {
+    font-weight: 300;
+    letter-spacing: 6px;
+    margin-bottom: 5%;
+}
+
+body {
+    background:
+        linear-gradient(rgba($cor-principal, 0.7), rgba($cor-principal, 0.7)),
+        url('../img/background-qual-e-seu-cao.jpg') no-repeat;
+
+    background-size: 120%;
+}
+
+
+.container,
+.row.justify-content-center.align-items-center {
+    height: 100%;
+    min-height: 100%;
+}
+
+.card {
+    margin: 0 auto;
+    float: none;
+    margin-bottom: 10px;
+    background: rgba(247, 247, 247, 0.7);
+    border: none;
+}
+
+
+input[type=text],
+select {
+    border-radius: 7px;
+    background: #f4f4f4;
+    border: none;
+    width: 230px;
+    margin-left: 30px;
+    height: 35px;
+    padding-left: 10px;
+    padding-right: 20px;
+    &:focus{
+        box-shadow: 0 0 5px rgba($cor-principal, .3);
+        border: 0 none;
+        outline: 0;
+        color: $cinza-escuro;
+    }
+  
+}
+
+select{
+    cursor: pointer;
+}
+
+input[type=text]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    cursor: pointer;
+    display: block;
+}
+
+.btn_salvar {
+    background: #f97338 ;
+    height: 50px;
+    width: 241px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-top: 5% !important;
+}
+
+
+#nomedopet{
+    z-index: 1;
+    position: absolute;
+    font-size: 32px;
+}
+
+.close {
+    font-size: 30px;
+    margin-right: 9px;
+}
+
+
+@media (max-width: 480px){
+    input[type=text], select {
+        border-radius: 7px;
+        background: #f4f4f4;
+        border: none;
+        width: 100%;
+        margin-top: 13px;
+        margin-left: 0px; 
+        height: 35px;
+        padding-left: 10px;
+        padding-right: 20px;
+    }
+
+    .modal-content{
+        margin-top: 50%;
+    }
+
+    .titulo{
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 780px){
+    input[type=text], select {
+        width: 100%;
+    }
+}

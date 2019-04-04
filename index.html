@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dogs</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="./img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./img/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./img/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./img/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./img/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./img/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./img/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./img/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./img/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+    <link rel="manifest" href="./img/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./img/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dokdo|Pacifico|Montserrat|Muli|Raleway" rel="stylesheet">
+</head>
+
+<body>
+    <section class="h-100">
+        <header class="container h-100">
+            <div class="d-flex align-items-center justify-content-center h-100">
+                <div class="d-flex flex-column">
+                    <div class="card p-5">
+                        <div class="card-body">
+                            <h1 class="text-center titulo text-uppercase">Qual o seu dog?</h1>
+                            <form action="" id='form'>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <select id='racaCaes'>
+                                            <option disabled hidden>Raça</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <input type="text" ' id="inputnomedopet" required maxlength="15" placeholder="Nome do Pet">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <select id="input-font" class="input" onchange="changeFont (this);">
+                                            <option value="Dokdo">Dokdo</option>
+                                            <option value="Montserrat">Montserrat</option>
+                                            <option value="Pacifico">Pacifico</option>
+                                            <option value="Muli">Muli</option>
+                                            <option value="Raleway">Raleway</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <select id="cores" onchange="changeColor(this);">
+                                            <option value="#0000FF">Azul</option>
+                                            <option value="#006400">Verde</option>
+                                            <option value="#FF0000">Vermelho</option>
+                                            <option value="#FFFFFF">Branco</option>
+                                            <option value="#FF1493">Rosa</option>
+                                        </select>
+                                    </div>
+                                </div>
+                        </div>
+                         <div  class="row text-center pt-5 justify-content-center" id='fotoPet'>
+                                        <label id="nomedopet"></label>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12 text-center">
+                                            <button type="button" class="mt-5 btn btn_salvar text-white text-uppercase"
+                                                id="btn_salvar" data-toggle="modal" data-target="#modal">Salvar</button>
+                                        </div>
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+        </header>
+    </section>
+
+
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="justify-content-end ">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 justify-content-center">
+                            <h6 class="text-center titulo  text-uppercase">Salvo com sucesso</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./js/jquery.js"></script>
+        <script src="./js/ajax.js"></script>
+        <script src="./js/index.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>
